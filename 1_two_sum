@@ -1,0 +1,18 @@
+def two_sum(nums, target):
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] + nums[j] == target and i != j:
+                return [i, j]
+    # If no solution found, return empty list
+    return []
+
+
+# Example input
+nums = [2, 5, 5, 11]
+target = 10
+
+# Call the function
+result = two_sum(nums, target)
+
+# Print the result
+print(result)  # Output: [0, 1] (indices of numbers 2 and 7 that add up to 9)
